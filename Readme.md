@@ -1,7 +1,7 @@
 # 🚀 TRIQ BOT — Windows AI PC Assistant & Remote Controller
 
 <p align="center">
-  <img src="public/icon.png" width="120" height="120" alt="TRIQ BOT Logo" />
+  <img src="[public/icon.png](https://i.postimg.cc/jdppJRM3/icon.png)" width="120" height="120" alt="TRIQ BOT Logo" />
 </p>
 
 <p align="center">
