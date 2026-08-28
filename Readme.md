@@ -77,74 +77,24 @@ graph TD
     ExpressServer -->|HTTPS API| OpenRouter[OpenRouter API]
 ```
 
----
+## 📥 Download & Installation
 
-## 🛠️ Quick Installation & Setup
+TRIQ BOT is distributed as a standalone Windows Desktop application by **Mistecx**.
 
-### Option 1: Direct Windows Installer (`.exe`)
-Download the pre-compiled installer from releases or the `dist/` directory:
-- Run `TRIQ BOT Setup 1.0.0.exe`
-- Choose installation path and finish setup
-- Launch **TRIQ BOT** from your Desktop or Start Menu!
+### 1. Download the Installer
+Download the latest Windows Setup (`.exe`) from the official release channels:
+- **Installer**: `TRIQ BOT Setup 1.0.0.exe` (Windows 10 / 11 64-bit)
 
----
+### 2. Install & Launch
+1. Run the installer and choose your preferred installation directory.
+2. The installer will create a **Desktop Shortcut** and **Start Menu entry**.
+3. Launch **TRIQ BOT** from your desktop or start menu.
 
-### Option 2: Run from Source
-
-#### 1. Prerequisites
-- **Node.js** (v18.0.0 or higher)
-- **npm** (comes with Node.js)
-- Windows 10 or Windows 11
-
-#### 2. Clone the Repository
-```bash
-git clone https://github.com/LostxJayesh/TRIQBOT.git
-cd TRIQBOT
-```
-
-#### 3. Install Dependencies
-```bash
-npm install
-```
-
-#### 4. Configure Environment
-Create a `.env` file or adjust `config.json` (also configurable via the in-app Settings UI):
-```ini
-PORT=3000
-PROVIDER=gemini
-GEMINI_API_KEY=AIzaSy...
-GEMINI_MODEL=gemini-2.0-flash
-TELEGRAM_BOT_TOKEN=123456789:ABC...
-TELEGRAM_AUTHORIZED_USER_ID=987654321
-START_ON_BOOT=false
-```
-
-#### 5. Launch
-```bash
-# Launch full Electron Desktop Application
-npm run electron
-
-# Or start standalone local web server
-npm start
-```
-*Access the web dashboard at `http://127.0.0.1:3000`.*
-
----
-
-## 📦 Building the Installer
-
-To package the application into a standalone Windows NSIS installer or portable executable:
-
-```bash
-# Build NSIS Setup Installer (outputs to dist/TRIQ BOT Setup 1.0.0.exe)
-npm run build
-
-# Build Portable Executable
-npm run build:portable
-
-# Build Both
-npm run build:all
-```
+### 3. Quick Initial Configuration
+1. Open the in-app **Settings** modal via the sidebar button.
+2. Enter your **Google Gemini** or **OpenRouter API Key**.
+3. (Optional) Paste your **Telegram Bot Token** to enable remote control.
+4. Click **Save Settings** — your credentials are encrypted and stored 100% locally on your device.
 
 ---
 
@@ -164,9 +114,9 @@ npm run build:all
 
 ## 🔒 Security & Privacy Architecture
 
-- **100% Localhost Bound**: The internal Express server binds exclusively to `127.0.0.1` — no public ports are opened.
+- **100% Localhost Bound**: The internal engine binds exclusively to `127.0.0.1` — no public ports are opened.
 - **Zero Third-Party Telemetry**: Your prompts, traces, and files stay strictly between your computer, your private Telegram bot, and your selected AI provider.
-- **Encrypted Local Storage**: API credentials and bot tokens are stored locally on your machine in `config.json` or `.env`.
+- **Encrypted Local Storage**: API credentials and bot tokens are stored locally on your machine.
 - **Single-User Lockout**: Any unauthorized Telegram user attempting to interact with your bot is immediately blocked and logged.
 
 ---
@@ -184,8 +134,11 @@ Built with ❤️ by **Mistecx**
 
 ---
 
-## 📄 License & Disclaimer
+## 📄 License & Copyright
 
-Distributed under the MIT License. See `LICENSE` for details.
+**Copyright © 2026 Mistecx. All Rights Reserved.**
+
+This software is proprietary and confidential. Unauthorized copying, distribution, modification, public display, reverse engineering, or decompilation of this software or any portion thereof is strictly prohibited.
 
 *Disclaimer: TRIQ BOT executes native commands on your operating system based on LLM reasoning. Always verify system instructions and maintain active backups of critical data.*
+
